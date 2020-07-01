@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="tgbStart">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="thermodeData">
+                  <xs:complexType>
+                    <xs:attribute name="x" type="xs:string" use="optional" />
+                    <xs:attribute name="y" type="xs:string" use="optional" />
+                    <xs:attribute name="idleTemp" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="timestamp" type="xs:string" use="optional" />
+              <xs:attribute name="bondingStation" type="xs:string" use="optional" />
+              <xs:attribute name="drawerPn" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalPn" type="xs:string" use="optional" />
+              <xs:attribute name="idleThermodeForce" type="xs:string" use="optional" />
+              <xs:attribute name="idlePedestalTemperature" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosLeftRear" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosLeftFront" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosRightRear" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosRightFront" type="xs:string" use="optional" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="trayData">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="sample">
+                  <xs:complexType>
+                    <xs:attribute name="time" type="xs:string" use="optional" />
+                    <xs:attribute name="pedestalTemp" type="xs:string" use="optional" />
+                    <xs:attribute name="force" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="unitData">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="sample">
+                        <xs:complexType>
+                          <xs:attribute name="time" type="xs:string" use="optional" />
+                          <xs:attribute name="temp" type="xs:string" use="optional" />
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:string" use="optional" />
+                    <xs:attribute name="lidId" type="xs:string" use="optional" />
+                    <xs:attribute name="y" type="xs:string" use="optional" />
+                    <xs:attribute name="x" type="xs:string" use="optional" />
+                    <xs:attribute name="minThermodeTemperature" type="xs:string" use="optional" />
+                    <xs:attribute name="minThermodeTemperatureDelay" type="xs:string" use="optional" />
+                    <xs:attribute name="maxThermodeTemperature" type="xs:string" use="optional" />
+                    <xs:attribute name="maxThermodeTemperatureDelay" type="xs:string" use="optional" />
+                    <xs:attribute name="delayThermodeTemperature" type="xs:string" use="optional" />
+                    <xs:attribute name="finalSitTime" type="xs:string" use="optional" />
+                    <xs:attribute name="bincode" type="xs:string" use="optional" />
+                    <xs:attribute name="binCodeList" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="timestamp" type="xs:string" use="optional" />
+              <xs:attribute name="swVersion" type="xs:string" use="optional" />
+              <xs:attribute name="lotId" type="xs:string" use="optional" />
+              <xs:attribute name="isDummyData" type="xs:string" use="optional" />
+              <xs:attribute name="drawerPn" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalPn" type="xs:string" use="optional" />
+              <xs:attribute name="trayNumber" type="xs:string" use="optional" />
+              <xs:attribute name="bondingStation" type="xs:string" use="optional" />
+              <xs:attribute name="measureDelay" type="xs:string" use="optional" />
+              <xs:attribute name="minForce" type="xs:string" use="optional" />
+              <xs:attribute name="maxForce" type="xs:string" use="optional" />
+              <xs:attribute name="delayForce" type="xs:string" use="optional" />
+              <xs:attribute name="minPedestalTemperature" type="xs:string" use="optional" />
+              <xs:attribute name="maxPedestalTemperature" type="xs:string" use="optional" />
+              <xs:attribute name="delayPedestalTemperature" type="xs:string" use="optional" />
+              <xs:attribute name="dwellTime" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalVacuumValue" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosLeftRear" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosLeftFront" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosRightRear" type="xs:string" use="optional" />
+              <xs:attribute name="topPlateZPosRightFront" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalZPosLeftRear" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalZPosLeftFront" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalZPosRightRear" type="xs:string" use="optional" />
+              <xs:attribute name="pedestalZPosRightFront" type="xs:string" use="optional" />
+              <xs:attribute name="finalSitTime" type="xs:string" use="optional" />
+              <xs:attribute name="overruledSitTimeViolation" type="xs:string" use="optional" />
+              <xs:attribute name="idReaderFocusHeight" type="xs:string" use="optional" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
